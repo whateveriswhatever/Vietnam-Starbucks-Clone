@@ -1,0 +1,1051 @@
+html,
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  overflow-x: hidden;
+}
+
+main {
+  overflow-y: hidden;
+}
+
+.notificationBar--shop {
+  background: #006341;
+}
+
+.notificationBar {
+  min-height: 10px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* CSS STYLE FOR HEADER COMPONENT  */
+.header_container {
+  background-color: #f7f7f7 !important;
+  position: relative;
+  padding-top: 12px;
+  z-index: 2;
+}
+
+.contentStripe__grid,
+.grid {
+  box-sizing: border-box;
+  zoom: 1;
+  text-align: left;
+  font-family: NoSpace;
+}
+
+.grid > .size12of12 {
+  width: calc(100% - 0.01px);
+}
+
+@media only screen and (min-width: 1280px) {
+  .column,
+  .contentStripe__content,
+  .contentStripe__media {
+    padding: 0 20px;
+  }
+}
+
+.column > #header {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.utilities > .utilities_list {
+  min-height: 1.5em;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: right;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+  clear: none;
+  margin-bottom: 1.71429em;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .utility_list > .store_locator,
+  .utility_list > .utility_link {
+    position: static;
+  }
+}
+
+.utility_link.search,
+.utility_link.shopping_bag,
+.utility_link.store_locator {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+}
+
+.utility_list > li {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .utility_link > a {
+    padding: 0 1.3rem;
+  }
+}
+
+.utility_link > a {
+  position: relative;
+  color: #5b5959;
+}
+
+.currency .currency_symbol,
+.utility_link > a,
+.utility_list > a {
+  font-weight: 400;
+}
+
+a:link,
+a:visited {
+  color: #2a8a15;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.filters .coffeeFilters li,
+a:link,
+span.sb_tooltip {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a > .location-marker {
+  width: 14px;
+  margin-right: 11px;
+}
+
+.contentStripe__grid > img,
+.grid > img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.header_container .hidden_visually {
+  line-height: 17px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  a > .med_render_visually {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+    margin-right: 14rem;
+  }
+}
+
+.hidden_visually {
+  position: absolute;
+  overflow: hidden;
+  margin: 1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+@media only screen and (min-width: 992px) {
+  #nav {
+    float: left;
+    clear: none;
+    margin-left: 26px;
+    margin-top: 12px;
+  }
+}
+
+#nav {
+  float: left;
+}
+
+#logo,
+#nav {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav_control {
+    display: none;
+  }
+}
+
+#nav > .nav_control {
+  position: absolute;
+  top: -44px;
+  right: -12px;
+  width: 44px;
+  height: 44px;
+}
+
+#nav > a,
+.footer > a {
+  font-weight: 400;
+}
+
+.nav_control > .hamburger {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #006341;
+  border: 12px solid #f7f7f7;
+}
+
+@media only screen and (min-width: 992px) {
+  #nav > .nav_menu {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #nav > .nav_menu {
+    margin-left: 8px;
+    width: auto;
+  }
+}
+
+#nav > .nav_menu {
+  clear: both;
+  overflow: hidden;
+  transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
+  width: 100vw;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav_menu > ul {
+    padding: 0;
+    background: 0 0;
+  }
+}
+
+/* .nav_menu > ul {
+  overflow: hidden;
+  margin-bottom: 0;
+  padding: 6% 0;
+  background: #1e1e1e;
+} */
+
+.nav_menu > ul {
+  overflow: hidden;
+  margin-bottom: 0;
+  /* padding: 6% 0; */
+  /* background: #1e1e1e; */
+}
+
+@media only screen and (min-width: 768px) {
+  #control_options > li {
+    margin: 0 1px 0 0;
+    width: auto;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #control_options > li,
+  .js > #nav,
+  .nav_menu {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  #control_options > li {
+    float: left;
+    width: 50%;
+  }
+}
+
+#control_options > li {
+  margin: 0 1px 0 0;
+  width: auto;
+  position: relative;
+}
+
+li {
+  margin-bottom: 0.85714em;
+}
+
+@media only screen and (min-width: 768px) {
+  li > .null_left,
+  /* #control_options > li, */
+  li > .null_right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  li > .tab {
+    /* border-bottom: 3px solid #f7f7f7; */
+    /* padding: 1em; */
+    color: #242424;
+  }
+}
+
+li > .tab {
+  /* padding: 3% 16%; */
+  color: #fff;
+  /* line-height: 1; */
+  display: block;
+}
+
+li > a {
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 992px) {
+  li > .tab,
+  li > strong {
+    font-size: 1em;
+    line-height: 1.136364;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  li > .tab,
+  li > strong {
+    font-size: 1em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+li > .tab,
+li > strong {
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+/* CSS STYLE FOR MAIN SECTION COMPONENT  */
+.main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  display: block;
+}
+
+@media only screen and (min-width: 1120px) {
+  div > .heroBanner,
+  .heroImage {
+    height: 560px;
+    background-size: auto;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  div > .heroBanner,
+  .heroBanner > .heroImage {
+    height: 532px;
+    background-size: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  div > .heroBanner,
+  .heroBanner > .heroImage {
+    height: 392px;
+    background-size: auto;
+  }
+}
+
+@media only screen and (min-width: 541px) {
+  div > .heroBanner,
+  .heroBanner > .heroImage {
+    height: 252px;
+    background-size: auto;
+  }
+}
+
+div > .heroBanner {
+  color: #0f0f0f;
+  position: relative;
+  width: 100%;
+  padding: 170px 0 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.heroBanner {
+  position: relative;
+  width: 100%;
+  padding: 170px 0 0;
+  text-align: center;
+  z-index: 1;
+}
+
+/* @media only screen and (min-width: 541px) {
+  div > .hero75123,
+  .heroBanner > .heroImage {
+    background-image: url("https://starbucks.vn/media/1vuphzru/hero-banner-desktop-bp.jpg");
+  }
+} */
+
+@media only screen and (min-width: 541px) {
+  div > .hero75123 {
+    background-image: url("https://starbucks.vn/media/1vuphzru/hero-banner-desktop-bp.jpg");
+  }
+}
+
+/* @media only screen and (min-width: 541px) {
+  .hero75123 > .heroImage {
+    background-image: url("https://starbucks.vn/media/1vuphzru/hero-banner-desktop-bp.jpg");
+  }
+} */
+
+/* div > .hero75123,
+.heroBanner > .heroImage {
+  background-image: url("https://starbucks.vn/media/xy2i0mrn/hero-banner-mobile-bp.jpg");
+} */
+
+/* div > .hero75123 {
+  background-image: url("https://starbucks.vn/media/xy2i0mrn/hero-banner-mobile-bp.jpg");
+} */
+
+/* @media only screen and (min-width: 541px) {
+  div > .hero75123 {
+    background-image: url("https://starbucks.vn/assets/images/Hero%20Banner%20-%20Desktop_tcm89-75121.jpg");
+  }
+} */
+
+/* @media only screen and (min-width: 1120px) {
+  .hero75123 > .heroImage {
+    height: 560px;
+    background-size: auto;
+  }
+} */
+
+@media only screen and (min-width: 1120px) {
+  div > .hero75123 {
+    height: 390px;
+    background-size: auto;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .heroBanner > .container {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .heroBanner > .container {
+    padding-top: 52px;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heroBanner > .container {
+    padding-top: 36px;
+    padding-bottom: 44px;
+  }
+}
+
+@media only screen and (min-width: 541px) {
+  .heroBanner > .container {
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0px;
+  }
+}
+
+.heroBanner > .container {
+  position: relative;
+}
+
+/* .heroBanner,
+.heroBanner > * {
+  box-sizing: border-box;
+} */
+
+.container,
+.contentStripe__container,
+.notificationBar--oldBrowser {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* .container > .fields,
+.heroBanner > .region {
+  width: 100%;
+  height: 100%;
+} */
+
+.fields {
+  clear: both;
+}
+
+@media only screen and (min-width: 541px) {
+  div > .heroBanner,
+  .fields > .region {
+    position: relative;
+  }
+}
+
+.container > .fields,
+.fields > .region {
+  width: 100%;
+  height: 100%;
+}
+
+.containStripeContainer {
+  box-shadow: 0 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+.containStripeContainer > .contenstripe-light-theme {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+.containStripeContainer > .containStripe {
+  z-index: 1;
+  color: #3d3a35;
+  background-position: center top;
+}
+
+.containStripeContainer > .containStripe,
+.small-hero {
+  position: relative;
+}
+
+@media only screen and (min-width: 960px) {
+  article > .contentStripe_container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container,
+  article > .contentStripe_container,
+  .notificationBar--oldBrowser {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container,
+  article > .contentStripe_container,
+  .notificationBar--oldBrowser {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container,
+  article > .contentStripe_container,
+  .notificationBar--oldBrowser {
+    padding: 0 12px;
+  }
+}
+
+.container,
+article > .contentStripe__container,
+.notificationBar--oldBrowser {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.contentStripe__container > .contentStripe__grid {
+  text-align: center;
+  box-sizing: border-box;
+  zoom: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .containStripeContainer > .contentStripe--imRight,
+  .contentStripe__grid > .contentStripe__media {
+    width: calc(41.6666666667% - 0.01px);
+    left: 41.66667%;
+    margin-left: 8.33333%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.contentStripe__grid > .contentStripe__media {
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+
+.contentStripe__media > a {
+  border-bottom: none;
+  background: 0 0;
+}
+
+.contenstripe-light-theme > a:link {
+  color: #fff;
+}
+
+.contentStripe_pciture > img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+@media only screen and (min-width: 768px) {
+  containStripeContainer > .contentStripe--imRight,
+  .contentStripe__grid > .contentStripe__content {
+    width: calc(41.6666666667% - 0.01px);
+    right: 50%;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .contentStripe__grid > .contentStripe__content {
+    font-size: 17px;
+  }
+}
+
+.contentStripe__grid > .contentStripe__content {
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contentStripe__container > .contentStripe_title {
+    font-weight: 700;
+    text-transform: uppercase;
+    word-spacing: 1px;
+    position: fixed;
+    display: block;
+    margin-left: -50rem;
+    margin-top: -16.5rem;
+  }
+}
+
+.contentStripe__content > .contentStripe_title {
+  /* margin: 0 0 0.78em !important; */
+  font-weight: 700;
+  text-transform: uppercase;
+  word-spacing: 1px;
+  position: relative;
+  display: block;
+  margin-left: -46rem;
+  margin-top: -18.4rem;
+}
+
+h2,
+.h2 {
+  font-size: 2.4rem;
+  line-height: 1.25;
+}
+
+.contentStripe__content > .contentStripe_body {
+  margin-bottom: 1em;
+}
+
+/* CSS STYLE FOR FOOTER SECTION COMPONENT */
+.footer {
+  padding: 0;
+  border-bottom: 8px solid #382f2d;
+  min-height: 190px;
+  background: #f7f7f7;
+  color: #382f2d;
+  font-size: 1em;
+  line-height: 1.090909;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer > .footer-top {
+    padding: 35px 0 0;
+  }
+}
+
+.footer > .footer-top {
+  background-color: #f0f0f0;
+  border-bottom: 3px solid #fff;
+  border-top: 3px solid #fff;
+  padding: 25px 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer-top > .container,
+  .footer-main > .container,
+  .footer-bottom > .container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-top > .container,
+  .footer-main > .container,
+  .footer-bottom > .container {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-top > .container,
+  .footer-main > .container,
+  .footer-bottom > .container {
+    padding: 0 12px;
+  }
+}
+
+.footer-top > .container,
+.footer-main > .container,
+.footer-bottom > .container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+  .container > .grid {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid > .sb-social-icons {
+    border: none;
+    border-bottom: 0;
+    margin-bottom: 35px;
+    padding-bottom: 0;
+  }
+}
+
+.grid > .sb-social-icons {
+  margin-bottom: 0;
+  /* border-bottom: 1px solid #b3b3b3; */
+  padding-bottom: 25px;
+  overflow: hidden;
+}
+
+.sb-social-icons > .facebook {
+  width: 47px;
+}
+
+.sb-social-icons > li {
+  float: left;
+  height: 31px;
+  margin-bottom: 0.5em;
+}
+
+/* .facebook > a {
+  background-position: 0 0;
+  width: 25px;
+  background: url("https://starbucks.vn/assets/images/social_icons.png")
+    no-repeat;
+  background-size: auto 100%;
+  transition: opacity 125ms ease-in-out;
+} */
+
+@media only screen and (min-width: 768px) {
+  .grid > .footer_global {
+    background-image: url("https://starbucks.vn/assets/images/wordmark_footer_tcm89-397.png");
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid > .footer_global {
+    background-image: url("https://starbucks.vn/assets/images/wordmark_footer_tcm89-397.png");
+    background-repeat: no-repeat;
+    min-height: 166px;
+    margin-top: 40px;
+    background-position: 98.5% 0;
+    background-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer_global > .lg_size2of12 {
+    width: calc(16.6666666667% - 0.01px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer_global > .lg_size2of12 {
+    width: calc(33.3333333333% - 0.01px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .column > h4 {
+    font-size: 1.2em;
+    margin: 0 12px;
+  }
+}
+
+.column > h4 {
+  padding: 18px 0;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+@media only screen and (min-width: 768px) {
+  .column > ol {
+    margin-bottom: 1.714286em;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .column > ol {
+    margin: 0 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer > .footer-bottom {
+    padding: 0 0 45px;
+    margin: 0;
+  }
+}
+
+.column > .site_selection {
+  margin: 11px 19px;
+  color: #333;
+}
+
+.site_selection > li:first-child {
+  border-right: 1px solid #b3b3b3;
+}
+
+.site_selection > li {
+  display: inline-block;
+  font-size: 1em;
+  padding: 0 0.75em 0 0;
+  margin: 5px 0;
+}
+
+.change > .culture {
+  margin-right: 1.2px;
+  font-weight: 700;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1;
+  color: #382f2d;
+}
+
+.culture > span {
+  padding-right: 2.7px;
+}
+
+span > .flag {
+  vertical-align: baseline;
+  position: static;
+  padding: 0 0.5em 0 0;
+  width: 16px;
+  height: 11px;
+  text-indent: -9999px;
+}
+
+.site_selection > .language {
+  padding-left: 0.75em;
+}
+
+.language > a {
+  font-weight: 700;
+  margin-right: 2.7px;
+  color: #382f2d;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.column > .footer-sub {
+  margin-bottom: 0;
+  display: inline;
+}
+
+@media only screen and (min-width: 768px) {
+  .column > .footer-sub {
+    overflow: hidden;
+    color: #666;
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-sub > li {
+    float: left;
+    padding: 0 1em;
+    margin-bottom: 0;
+    border-right: 1px solid #b3b3b3;
+  }
+}
+
+.column > #tesconsent {
+  display: inline;
+}
+
+.footer-sub > .whatever > a {
+  padding-right: 0.4rem;
+  font-size: 0.1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .column > .footer_copyright {
+    clear: both;
+    font-size: 0.714286em;
+    color: #666;
+  }
+}
+
+.column > .footer_copyright {
+  margin: 25px 0;
+  font-size: 0.857143em;
+}
