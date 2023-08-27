@@ -6,8 +6,9 @@ const Nav: React.FC = () => {
         position: "relative",
         float: "left",
         clear: "none",
-        marginLeft: "4.8rem",
+        marginLeft: "18.8rem",
         marginTop: "-2.9rem",
+        // fontSize: "1.1rem",
       }}
     >
       <NavControl />
@@ -74,7 +75,11 @@ const NavMenuOptions: React.FC<IOptionsinMenu> = ({
     <li id={id} className="" style={{ marginRight: "2rem" }}>
       <div className="null_left"></div>
       <a className="tab" href={href}>
-        <strong style={{ color: "#000", fontSize: "1em" }}>{detail}</strong>
+        <strong
+          style={{ color: "#000", fontSize: "1rem", fontStyle: "normal" }}
+        >
+          {detail}
+        </strong>
       </a>
       <div className="null_right"></div>
     </li>

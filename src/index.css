@@ -127,7 +127,7 @@ video {
 
 /* CSS STYLE FOR HEADER COMPONENT  */
 .header_container {
-  background-color: #f7f7f7 !important;
+  /* background-color: #f7f7f7 !important; */
   position: relative;
   padding-top: 12px;
   z-index: 2;
