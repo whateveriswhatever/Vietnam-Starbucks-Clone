@@ -1049,3 +1049,8 @@ span > .flag {
   margin: 25px 0;
   font-size: 0.857143em;
 }
+
+.nav_toggling {
+  background-color: #000;
+  color: #fff;
+}
