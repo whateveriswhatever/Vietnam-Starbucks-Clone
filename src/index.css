@@ -1051,6 +1051,177 @@ span > .flag {
 }
 
 .nav_toggling {
+  /* display: block; */
   background-color: #000;
   color: #fff;
+  /* margin-top: 1.6rem;
+  margin-left: -4rem; */
+}
+
+/* .nav_toggling > .container_space {
+  margin-top: 1.6rem;
+  margin-left: -4rem;
+} */
+
+/* CSS STYLE FOR MegaNavs SECTION COMPONENT */
+@media only screen and (min-width: 768px) {
+  #menus > .fields {
+    background: url("https://starbucks.vn/assets/images/pattern_stars.png")
+      #1e1e1e;
+    font-size: 0.928571em;
+    line-height: 1.230769;
+  }
+}
+
+#menus {
+  width: 100%;
+  margin: -1px 0 0;
+  /* background-color: #1e1e1e; */
+  color: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 10000000000;
+}
+
+#menus > .fields {
+  background: url("https://starbucks.vn/assets/images/pattern_stars.png")
+    #1e1e1e;
+  font-size: 0.928571em;
+  line-height: 1.230769;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  #menus > .container {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #menus > .container {
+    overflow: hidden;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #menu_0 > .menu_content {
+    padding: 0 0 0 110px;
+    background: #1e1e1e;
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #menu_0 > .size4of5 {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #menu_0 > .region {
+    position: relative;
+    float: left;
+    margin-top: 7.1rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .menu_content > ol {
+    padding: 1em 0 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu_content > ol {
+    min-height: 109px;
+    margin: 0 0 1em;
+    list-style: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .region > .blocks {
+    margin-left: 40px;
+  }
+}
+
+.region > .blocks,
+.blocks > li,
+.blocks:after {
+  display: block;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  .region > .menu_suggestion_title {
+    clear: both;
+    margin: 0 8px 0.5em 12px;
+    padding: 0.75em 4px 0;
+    border-top: 1px solid #5e5f62;
+    font-weight: 400;
+    font-size: 1.230769em;
+    line-height: 1.125;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .blocks-five-up > li:nth-child(5n + 1),
+  .blocks-four-up > li:nth-child(4n + 1),
+  .blocks-six-up > li:nth-child(6n + 1),
+  .blocks-three-up > li:nth-child(3n + 1) {
+    clear: left;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .blocks > li {
+    padding: 0 0 0 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .blocks > li {
+    padding: 0 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .blocks > li {
+    padding: 0 0 0 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #li1 > p {
+    color: #e6e8e8;
+    margin-bottom: 0.3076923em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu_content > ol {
+    margin: 0 0 1em;
+    list-style: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu_content li li,
+  .menu_content p {
+    margin-bottom: 0.3076923em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #menus p,
+  #menus p a {
+    font-weight: 700;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #menus p {
+    color: #e6e8e8;
+  }
 }
