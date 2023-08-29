@@ -1091,6 +1091,14 @@ span > .flag {
   color: #fff;
 }
 
+/* .container > .fields {
+  background: url("https://starbucks.vn/assets/images/pattern_stars.png")
+    #1e1e1e;
+  font-size: 0.928571em;
+  line-height: 1.230769;
+  clear: both;
+} */
+
 @media only screen and (min-width: 768px) {
   #menus > .container {
     overflow: hidden;
@@ -1122,7 +1130,7 @@ span > .flag {
   #menu_0 > .region {
     position: relative;
     float: left;
-    margin-top: 7.1rem;
+    margin-top: 5.8rem;
   }
 }
 
@@ -1223,5 +1231,18 @@ span > .flag {
 @media only screen and (min-width: 768px) {
   #menus p {
     color: #e6e8e8;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .fields > .size1of5 {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .fields > .region {
+    position: relative;
+    float: left;
   }
 }

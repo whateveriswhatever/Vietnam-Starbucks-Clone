@@ -1,13 +1,14 @@
-import { useState, useContext, createContext } from "react";
+// import { useState, useContext, useEffect } from "react";
+import { useState } from "react";
 // import Coffe from "../NavBarofNavBar/Coffe";
-import Menu from "../NavBarofNavBar/Menu";
+// import Menu from "../NavBarofNavBar/Menu";
 import About_Us from "../NavBarofNavBar/About_Us";
 import { Card } from "../NavBarofNavBar/Card";
 import Responsibility from "../NavBarofNavBar/Responsibility";
 import CoffeHouse from "../NavBarofNavBar/CoffeHouse";
-import MegaNavs from "../MegaNavs";
+import { Skeptical } from "../../../Skeptical";
 
-const Nav: React.FC = () => {
+const Nav: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
   return (
     <nav
       id="nav"
@@ -21,7 +22,10 @@ const Nav: React.FC = () => {
       }}
     >
       <NavControl />
-      <NavMenu />
+      <NavMenu
+        setIsDisplayed={setIsDisplayed}
+        setDisplayedWhat={setDisplayedWhat}
+      />
     </nav>
   );
 };
@@ -39,17 +43,9 @@ const NavControl: React.FC = () => {
   );
 };
 
-const NavMenu: React.FC = () => {
+const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
   const [isHover, setIsHover] = useState(false);
   const [identity, setIdentity] = useState("");
-  const UserContext = createContext(false);
-
-  // const handleMouseUp = () => {
-  //   setIsHover(true);
-  // };
-  // const handleMouseLeave = () => {
-  //   setIsHover(false);
-  // };
 
   return (
     <div className="nav_menu">
@@ -70,23 +66,54 @@ const NavMenu: React.FC = () => {
             setIsHover(false);
           }}
         /> */}
-        <li id="nav_0" className="" style={{ marginRight: "2rem" }}>
+        <li
+          id="nav_0"
+          className=""
+          style={{
+            marginRight: "2rem",
+            backgroundColor: isHover && identity === "Coffee" ? "#000" : "#fff",
+            marginBottom: "-1.4rem",
+          }}
+          onClick={() => console.log("OK")}
+          onMouseEnter={() => {
+            setIsHover(true);
+            setIdentity("Coffee");
+            setIsDisplayed(true);
+            setDisplayedWhat("Coffee");
+            // setDisplayedWhat("Coffee");
+            // setDisplayedWhat("Coffee")
+          }}
+          onMouseLeave={() => {
+            setIsHover(false);
+            setIdentity("");
+            setIsDisplayed(false);
+            // setDisplayedWhat("");
+          }}
+        >
           <div className="null_left"></div>
           <a
             className="tab"
             href="/ca-phe/"
-            onMouseEnter={() => {
-              setIsHover(true);
-              console.log("hovered!");
-              setIdentity("Coffee");
-            }}
-            onMouseLeave={() => {
-              setIsHover(false);
-              setIdentity("");
+            // onMouseEnter={() => {
+            //   setIsHover(true);
+            //   setIdentity("Coffee");
+            //   setIsDisplayed(true);
+            // }}
+            // onMouseLeave={() => {
+            //   setIsHover(false);
+            //   setIdentity("");
+            //   setIsDisplayed(false);
+            // }}
+            onClick={() => {
+              console.log(`ok`);
             }}
           >
             <strong
-              style={{ color: "#000", fontSize: "1rem", fontStyle: "normal" }}
+              style={{
+                color: isHover && identity === "Coffee" ? "#fff" : "#000",
+                fontSize: "1rem",
+                fontStyle: "normal",
+              }}
             >
               CÀ PHÊ
             </strong>
@@ -109,22 +136,49 @@ const NavMenu: React.FC = () => {
           }}
         /> */}
 
-        <li id="nav_1" style={{ marginRight: "2rem" }}>
+        <li
+          id="nav_1"
+          style={{
+            marginRight: "2rem",
+            backgroundColor: isHover && identity === "Menu" ? "#000" : "#fff",
+          }}
+          onMouseEnter={() => {
+            setIsHover(true);
+            //setIdentity("Menu");
+            setIsDisplayed(true);
+            setDisplayedWhat("Menu");
+          }}
+          onMouseLeave={() => {
+            setIsHover(false);
+            //setIdentity("");
+            setIsDisplayed(false);
+            setDisplayedWhat("");
+          }}
+          onClick={() => {
+            //
+          }}
+        >
           <div className="null_left"></div>
           <a
             className="tab"
             href=""
-            onMouseEnter={() => {
-              setIsHover(true);
-              setIdentity("");
-            }}
-            onMouseLeave={() => {
-              setIsHover(false);
-              setIdentity("");
-            }}
+            // onMouseEnter={() => {
+            //   setIsHover(true);
+            //   setIdentity("");
+            //   setIsDisplayed(true);
+            // }}
+            // onMouseLeave={() => {
+            //   setIsHover(false);
+            //   setIdentity("");
+            //   setIsDisplayed(false);
+            // }}
           >
             <strong
-              style={{ color: "#000", fontSize: "1rem", fontStyle: "normal" }}
+              style={{
+                color: isHover && identity === "Menu" ? "#fff" : "#000",
+                fontSize: "1rem",
+                fontStyle: "normal",
+              }}
             >
               THỰC ĐƠN
             </strong>
@@ -132,7 +186,7 @@ const NavMenu: React.FC = () => {
           <div className="null_right"></div>
         </li>
 
-        {isHover && identity === "Menu" ? <Menu /> : <></>}
+        {/* {isHover && identity === "Menu" ? <Menu /> : <></>} */}
         <NavMenuOptions
           id="nav_2"
           href="/quan-ca-phe/"
@@ -211,9 +265,6 @@ interface IOptionsinMenu {
   detail: string;
   onMouseEnter: any;
   onMouseLeave: any;
-  // componentRendered: React.FC;
-  // validator: boolean;
-  // checkmark: string;
 }
 
 const NavMenuOptions: React.FC<IOptionsinMenu> = ({

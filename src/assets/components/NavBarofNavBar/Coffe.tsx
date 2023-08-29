@@ -2,9 +2,9 @@
 
 import React from "react";
 
-const Coffe = () => {
+const Coffe: React.FC<{ displayedSelection?: string }> = () => {
   return (
-    <div className="fields" id="menu_0">
+    <li className="fields" id="menu_0">
       <div className="region size4of5 menu_content">
         <ol
           className="blocks blocks-four-up"
@@ -39,7 +39,7 @@ const Coffe = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </li>
   );
 };
 
@@ -231,7 +231,11 @@ interface HTMLLiTag {
   styleMarginTop?: string;
 }
 
-const LiTagSample: React.FC<HTMLLiTag> = ({ href, detail, styleMarginTop }) => {
+export const LiTagSample: React.FC<HTMLLiTag> = ({
+  href,
+  detail,
+  styleMarginTop,
+}) => {
   return (
     <li style={{ marginTop: styleMarginTop }}>
       <a

@@ -1,7 +1,8 @@
 import StarbuckLogo from "./stuffs/StarbuckLogo";
 import Utilities from "./stuffs/Utilities";
 import Nav from "./stuffs/Nav";
-const Header = () => {
+import { Skeptical } from "../../Skeptical";
+const Header: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
   return (
     <header className="header_container">
       <div className="grid">
@@ -9,7 +10,10 @@ const Header = () => {
           <div id="header">
             <StarbuckLogo />
             <Utilities />
-            <Nav />
+            <Nav
+              setIsDisplayed={setIsDisplayed}
+              setDisplayedWhat={setDisplayedWhat}
+            />
           </div>
         </div>
       </div>
