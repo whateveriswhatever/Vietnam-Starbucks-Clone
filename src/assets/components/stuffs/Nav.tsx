@@ -2,10 +2,10 @@
 import { useState } from "react";
 // import Coffe from "../NavBarofNavBar/Coffe";
 // import Menu from "../NavBarofNavBar/Menu";
-import About_Us from "../NavBarofNavBar/About_Us";
-import { Card } from "../NavBarofNavBar/Card";
-import Responsibility from "../NavBarofNavBar/Responsibility";
-import CoffeHouse from "../NavBarofNavBar/CoffeHouse";
+// import About_Us from "../NavBarofNavBar/About_Us";
+// import { Card } from "../NavBarofNavBar/Card";
+// import Responsibility from "../NavBarofNavBar/Responsibility";
+// import CoffeHouse from "../NavBarofNavBar/CoffeHouse";
 import { Skeptical } from "../../../Skeptical";
 
 const Nav: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
@@ -80,8 +80,6 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
             setIdentity("Coffee");
             setIsDisplayed(true);
             setDisplayedWhat("Coffee");
-            // setDisplayedWhat("Coffee");
-            // setDisplayedWhat("Coffee")
           }}
           onMouseLeave={() => {
             setIsHover(false);
@@ -119,8 +117,6 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
             </strong>
           </a>
           <br />
-          {/* {isHover && identity === "Coffee" ? <Coffe /> : <></>} */}
-          {/* {isHover && identity === "Coffee" ? <MegaNavs /> : <></>} */}
         </li>
         {/* <NavMenuOptions
           id="nav_1"
@@ -144,13 +140,13 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
           }}
           onMouseEnter={() => {
             setIsHover(true);
-            //setIdentity("Menu");
+            setIdentity("Menu");
             setIsDisplayed(true);
             setDisplayedWhat("Menu");
           }}
           onMouseLeave={() => {
             setIsHover(false);
-            //setIdentity("");
+            setIdentity("");
             setIsDisplayed(false);
             setDisplayedWhat("");
           }}
@@ -193,14 +189,24 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
           detail="QUÁN CÀ PHÊ"
           onMouseEnter={() => {
             setIsHover(true);
-            setIdentity("Coffe Shop");
+            setIdentity("Coffee shop");
+            setIsDisplayed(true);
+            setDisplayedWhat("Coffee Shop");
           }}
           onMouseLeave={() => {
             setIsHover(false);
             setIdentity("");
+            setIsDisplayed(false);
+            setDisplayedWhat("");
           }}
+          colorWhenHovered={
+            isHover && identity === "Coffee shop" ? "#fff" : "#000"
+          }
+          backgroundColorWhenHovered={
+            isHover && identity === "Coffee shop" ? "#000" : "#fff"
+          }
         />
-        {isHover && identity === "Coffe Shop" ? <CoffeHouse /> : <></>}
+        {/* {isHover && identity === "Coffe Shop" ? <CoffeHouse /> : <></>} */}
         <NavMenuOptions
           id="nav_3"
           href="/trach-nhiem/"
@@ -208,13 +214,23 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
           onMouseEnter={() => {
             setIsHover(true);
             setIdentity("Responsibility");
+            setIsDisplayed(true);
+            setDisplayedWhat("Responsibility");
           }}
           onMouseLeave={() => {
             setIsHover(false);
             setIdentity("");
+            setIsDisplayed(false);
+            setDisplayedWhat("");
           }}
+          colorWhenHovered={
+            isHover && identity === "Responsibility" ? "#fff" : "#000"
+          }
+          backgroundColorWhenHovered={
+            isHover && identity === "Responsibility" ? "#000" : "#fff"
+          }
         />
-        {isHover && identity === "Responsibility" ? <Responsibility /> : <></>}
+        {/* {isHover && identity === "Responsibility" ? <Responsibility /> : <></>} */}
         <NavMenuOptions
           id="nav_4"
           href="/ve-chung-toi/"
@@ -222,13 +238,23 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
           onMouseEnter={() => {
             setIsHover(true);
             setIdentity("About us");
+            setIsDisplayed(true);
+            setDisplayedWhat("About Us");
           }}
           onMouseLeave={() => {
             setIsHover(false);
             setIdentity("");
+            setIsDisplayed(false);
+            setDisplayedWhat("");
           }}
+          colorWhenHovered={
+            isHover && identity === "About us" ? "#fff" : "#000"
+          }
+          backgroundColorWhenHovered={
+            isHover && identity === "About us" ? "#000" : "#fff"
+          }
         />
-        {isHover && identity === "About us" ? <About_Us /> : <></>}
+        {/* {isHover && identity === "About us" ? <About_Us /> : <></>} */}
         <NavMenuOptions
           id="nav_5"
           href="/the/"
@@ -236,13 +262,21 @@ const NavMenu: React.FC<Skeptical> = ({ setIsDisplayed, setDisplayedWhat }) => {
           onMouseEnter={() => {
             setIsHover(true);
             setIdentity("Card");
+            setIsDisplayed(true);
+            setDisplayedWhat("Card");
           }}
           onMouseLeave={() => {
             setIsHover(false);
             setIdentity("");
+            setIsDisplayed(false);
+            setDisplayedWhat("");
           }}
+          colorWhenHovered={isHover && identity === "Card" ? "#fff" : "#000"}
+          backgroundColorWhenHovered={
+            isHover && identity === "Card" ? "#000" : "#fff"
+          }
         />
-        {isHover && identity === "Card" ? <Card /> : <></>}
+        {/* {isHover && identity === "Card" ? <Card /> : <></>} */}
       </ul>
     </div>
   );
@@ -257,6 +291,8 @@ type TypeOptionsinMenu = {
   // componentRendered: React.FC;
   // validator: boolean;
   // checkmark: string;
+  backgroundColorWhenHovered: string;
+  colorWhenHovered: string;
 };
 
 interface IOptionsinMenu {
@@ -265,6 +301,8 @@ interface IOptionsinMenu {
   detail: string;
   onMouseEnter: any;
   onMouseLeave: any;
+  backgroundColorWhenHovered: string;
+  colorWhenHovered: string;
 }
 
 const NavMenuOptions: React.FC<IOptionsinMenu> = ({
@@ -273,12 +311,15 @@ const NavMenuOptions: React.FC<IOptionsinMenu> = ({
   detail,
   onMouseEnter,
   onMouseLeave,
+  backgroundColorWhenHovered,
+  colorWhenHovered,
 }: //validator,
 // checkmark,
 //componentRendered,
 // componentRendered,
 // validator,
 TypeOptionsinMenu) => {
+  // const [isHovered, setIsHovered] = useState(false);
   // const [isHover, setIsHover] = useState(false);
   // const [identify, setIdentify] = useState("");
 
@@ -303,7 +344,14 @@ TypeOptionsinMenu) => {
   //   `validator: ${validator} - componentRendered: ${componentRendered}`
   // );
   return (
-    <li id={id} className="" style={{ marginRight: "2rem" }}>
+    <li
+      id={id}
+      className=""
+      style={{
+        marginRight: "2rem",
+        backgroundColor: backgroundColorWhenHovered,
+      }}
+    >
       <div className="null_left"></div>
       <a
         className="tab"
@@ -314,7 +362,11 @@ TypeOptionsinMenu) => {
         onMouseLeave={onMouseLeave}
       >
         <strong
-          style={{ color: "#000", fontSize: "1rem", fontStyle: "normal" }}
+          style={{
+            color: colorWhenHovered,
+            fontSize: "1rem",
+            fontStyle: "normal",
+          }}
         >
           {detail}
         </strong>

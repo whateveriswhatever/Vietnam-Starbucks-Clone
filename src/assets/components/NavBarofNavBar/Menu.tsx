@@ -1,4 +1,5 @@
 // import React from "react";
+import { useState } from "react";
 import { LiTagSample } from "./Coffe";
 const Menu = () => {
   return (
@@ -131,10 +132,18 @@ const Li2: React.FC = () => {
 };
 
 const LinkDirection: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       className="region size1of5 menu_promo"
-      style={{ marginTop: "-21.5rem", marginLeft: "57rem" }}
+      style={{
+        marginTop: "-21.5rem",
+        marginLeft: "57rem",
+        backgroundColor: isHovered ? "green" : "#1e1e1e",
+        textAlign: "center",
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <a href="https://starbucks.vn/thuc-don/thuc-an/" target="_self">
         <p>
@@ -151,14 +160,21 @@ const LinkDirection: React.FC = () => {
             color: "#fff",
             fontWeight: "400",
             fontSize: "1.2rem",
-            marginTop: "-1.3rem",
+            marginTop: "-1.8rem",
           }}
         >
-          <strong style={{ lineHeight: "0.2rem" }}>
+          <strong style={{ lineHeight: "0.2rem", fontSize: "1.1rem" }}>
             Đồ ăn Thực thụ, Cực Ngon
           </strong>
         </p>
-        <p style={{ marginTop: "-1rem", lineHeight: "2rem", fontSize: "1rem" }}>
+        <p
+          style={{
+            marginTop: "-1rem",
+            lineHeight: "2rem",
+            fontSize: "1rem",
+            width: "18rem",
+          }}
+        >
           Xem những lựa chọn món ăn mới trong cửa hàng của chúng tôi.
         </p>
       </a>

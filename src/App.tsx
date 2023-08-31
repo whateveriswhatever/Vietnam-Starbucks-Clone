@@ -5,9 +5,13 @@ import "./App.css";
 import Header from "./assets/components/Header";
 import Main from "./assets/components/Main";
 import Footer from "./assets/components/Footer";
-import MegaNavs from "./assets/components/MegaNavs";
-import MegaNavs1 from "./assets/components/MegaNavs1";
+import MegaNavs from "./assets/components/MegaNavsCollections/MegaNavs";
+import MegaNavs1 from "./assets/components/MegaNavsCollections/MegaNavs1";
+import MegaNavs2 from "./assets/components/MegaNavsCollections/MegaNavs2";
+import MegaNavs3 from "./assets/components/MegaNavsCollections/MegaNavs3";
+import MegaNavs4 from "./assets/components/MegaNavsCollections/MegaNavs4";
 import { useState } from "react";
+import MegaNavs5 from "./assets/components/MegaNavsCollections/MegaNavs5";
 // import { UserContext } from "./UserContext";
 
 function App() {
@@ -32,11 +36,34 @@ function App() {
         <MegaNavs selection="Menu" />
       ) : null} */}
       {/* {isDisplayed ? <MegaNavs selection="Coffee" /> : null} */}
-      {isDisplayed && displayedWhat === "Coffee" ? <MegaNavs /> : null}
+      {/* {isDisplayed && displayedWhat === "Coffee" ? <MegaNavs /> : null} */}
       {/* <MegaNavs /> */}
       {/* </UserContext.Provider> */}
       {/* <MegaNavs /> */}
-      {isDisplayed && displayedWhat === "Menu" ? <MegaNavs1 /> : null}
+      {/* {isDisplayed && displayedWhat === "Menu" ? <MegaNavs1 /> : null} */}
+      {/* <MegaNavs2 /> */}
+      {/* {isDisplayed && displayedWhat === "Coffee Shop" ? <MegaNavs2 /> : null} */}
+      {/* <MegaNavs3 /> */}
+      {/* {isDisplayed && displayedWhat === "Responsibility" ? <MegaNavs3 /> : null} */}
+      {isDisplayed && displayedWhat === "Coffee" ? (
+        <MegaNavs />
+      ) : isDisplayed && displayedWhat === "Menu" ? (
+        <MegaNavs1 />
+      ) : isDisplayed && displayedWhat === "Coffee Shop" ? (
+        <MegaNavs2 />
+      ) : isDisplayed && displayedWhat === "Responsibility" ? (
+        <MegaNavs3 />
+      ) : isDisplayed && displayedWhat === "About Us" ? (
+        <MegaNavs4 />
+      ) : isDisplayed && displayedWhat === "Card" ? (
+        <MegaNavs5 />
+      ) : null}
+      {/* <MegaNavs /> */}
+      {/* <MegaNavs1 /> */}
+      {/* <MegaNavs2 /> */}
+      {/* <MegaNavs3 /> */}
+      {/* <MegaNavs4 /> */}
+      {/* <MegaNavs5 /> */}
       <Main />
       <br />
       <br />

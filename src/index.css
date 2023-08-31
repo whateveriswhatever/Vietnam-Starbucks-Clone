@@ -1076,7 +1076,7 @@ span > .flag {
 #menus {
   width: 100%;
   margin: -1px 0 0;
-  /* background-color: #1e1e1e; */
+  background-color: #1e1e1e;
   color: #fff;
   position: absolute;
   left: 0;

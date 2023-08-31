@@ -1,6 +1,5 @@
-// import React from 'react'
-
 import React from "react";
+import { useState } from "react";
 
 const Coffe: React.FC<{ displayedSelection?: string }> = () => {
   return (
@@ -8,7 +7,11 @@ const Coffe: React.FC<{ displayedSelection?: string }> = () => {
       <div className="region size4of5 menu_content">
         <ol
           className="blocks blocks-four-up"
-          style={{ display: "grid", gridTemplateColumns: "repeat(4, 0.5fr)" }}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 0.5fr)",
+            marginLeft: "-2rem",
+          }}
         >
           <Li1 />
           <Li2 />
@@ -28,17 +31,25 @@ const Coffe: React.FC<{ displayedSelection?: string }> = () => {
           className="menu_suggestion_links"
           style={{ position: "relative", marginLeft: "1rem" }}
         >
-          <li className="navGroup_menu_sugList_item">
+          <li
+            className="navGroup_menu_sugList_item"
+            style={{ marginTop: "-1rem" }}
+          >
             <a
               className="link"
               href="https://starbucks.vn/thuc-don/thuc-uong/"
-              style={{ color: "#fff", fontWeight: "700", fontSize: "1rem" }}
+              style={{
+                color: "#fff",
+                fontWeight: "700",
+                fontSize: "1rem",
+              }}
             >
               Thức uống
             </a>
           </li>
         </ul>
       </div>
+      <Component2 />
     </li>
   );
 };
@@ -47,7 +58,7 @@ export default Coffe;
 
 const Li1: React.FC = () => {
   return (
-    <li id="li1" style={{ display: "flex" }}>
+    <li id="li1" style={{ display: "flex", marginLeft: "1rem" }}>
       <p style={{ marginTop: "-1rem" }}>
         <a
           href="https://starbucks.vn/ca-phe/ca-phe-cua-chung-toi/"
@@ -168,7 +179,7 @@ const Li4: React.FC = () => {
 
 const Li5: React.FC = () => {
   return (
-    <li style={{ display: "flex", marginLeft: "-16rem" }}>
+    <li style={{ display: "flex", marginLeft: "-16rem", marginTop: "-3rem" }}>
       <p>
         <a
           href="https://starbucks.vn/ca-phe/tim-nguon-cung-ung-co-dao-duc/"
@@ -200,7 +211,7 @@ const Li5: React.FC = () => {
 
 const Li6: React.FC = () => {
   return (
-    <li style={{ display: "flex", marginLeft: "-16rem", marginTop: "7px" }}>
+    <li style={{ display: "flex", marginLeft: "-16rem", marginTop: "-2.6rem" }}>
       <p style={{ fontSize: "1rem", fontWeight: "700", color: "#fff" }}>
         Tìm hiểu Thêm
       </p>
@@ -236,14 +247,61 @@ export const LiTagSample: React.FC<HTMLLiTag> = ({
   detail,
   styleMarginTop,
 }) => {
+  const [isHoveredLink, setIsHoveredLink] = useState(false);
   return (
     <li style={{ marginTop: styleMarginTop }}>
       <a
         href={href}
-        style={{ color: "#fff", fontSize: "0.95rem", fontWeight: "400" }}
+        style={{
+          color: "#fff",
+          fontSize: "0.95rem",
+          fontWeight: "400",
+          backgroundColor: isHoveredLink ? "green" : "#000",
+        }}
+        onMouseEnter={() => {
+          setIsHoveredLink(true);
+        }}
+        onMouseLeave={() => {
+          setIsHoveredLink(false);
+        }}
       >
         {detail}
       </a>
     </li>
+  );
+};
+
+const Component2: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div
+      className="region size1of5 menu_promo"
+      style={{
+        float: "right",
+        marginTop: "-29.5rem",
+        marginRight: "-1rem",
+        backgroundColor: isHovered ? "green" : "#1e1e1e",
+        width: "180px",
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <a href="https://starbucks.vn/ca-phe/vang/" target="_self">
+        <p>
+          <img
+            src="https://starbucks.vn/media/gapffx4c/blonde_roast_coffee_tcm89-15926.jpg"
+            alt="Starbucks Rewards"
+          />
+        </p>
+        <p></p>
+        <p style={{ fontSize: "1.1rem", marginTop: "-2rem" }}>
+          <strong>Blonde Roast</strong>
+        </p>
+        <p style={{ fontSize: "1rem", marginTop: "-2.2rem", width: "10rem" }}>
+          Nhẹ và ngọt dịu, loại cà phê rang qua hoàn hảo.
+        </p>
+        <p></p>
+      </a>
+    </div>
   );
 };
